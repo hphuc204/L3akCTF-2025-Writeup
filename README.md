@@ -57,4 +57,5 @@ with open("rockyou.txt", "r", encoding="latin-1") as f:
                 exit()
 ```
 I spent quite some time, and the result is: 
+
 ![image](https://hackmd.io/_uploads/HJ0oZRE8xx.png)
