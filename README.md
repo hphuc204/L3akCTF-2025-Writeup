@@ -3,6 +3,8 @@ These are some challenges I was able to solve in this competition. I am a newbie
 ## Hash Cracking
 ![image](https://hackmd.io/_uploads/BkamgCN8xg.png)
 
+### Rule Breaker 1
+
 The flag here will require finding 3 passwords and combining them with the form L3AK{pass1_pass2_pass3} with 3 hashes 
 ```
 5e09f66ae5c6b2f4038eba26dc8e22d8aeb54f624d1d3ed96551e90dac7cf0d
@@ -24,3 +26,9 @@ It means the hash has been cracked and the result has been saved in hashcat's po
 We will see the result as 
 
 ![image](https://hackmd.io/_uploads/H1tTqRE8el.png)
+
+Now I will find password 2:
+Based on the assignment requirements, we will write a Python script named ```crack_pass2.p```y to:
+- Iterate through each word in rockyou.txt
+- Remove each character in the word one by one
+- Hash each modified version and compare it with the given hash
