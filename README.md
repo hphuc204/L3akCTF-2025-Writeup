@@ -44,11 +44,10 @@ count = 0
 with open("rockyou.txt", "r", encoding="latin-1") as f:
     for word in f:
         word = word.strip()
-        # Loại bỏ từ quá ngắn (xóa 1 ký tự phải còn > 0)
         if len(word) < 2:
             continue
         for i in range(len(word)):
-            mutated = word[:i] + word[i+1:]  # xóa ký tự tại vị trí i
+            mutated = word[:i] + word[i+1:]  
             count += 1
             if count % 500000 == 0:
                 print(f"Đã thử {count} tổ hợp: {mutated}")
@@ -59,3 +58,63 @@ with open("rockyou.txt", "r", encoding="latin-1") as f:
 I spent quite some time, and the result is: 
 
 ![image](https://hackmd.io/_uploads/HJ0oZRE8xx.png)
+
+Finally it's pass 3 :
+
+I will create a Python script named ```crack_pass3.py```
+
+```
+python import hashlib
+from itertools import product
+from multiprocessing import Pool, cpu_count
+
+# SHA256 hash của pass3
+target = "4ac53d04443e6786752ac78e2dc86f60a629e4639edacc6a5937146f3eacc30f"
+
+# Bảng leet hóa nguyên âm
+leet_map = {
+    'a': ['a', '4', '@'],
+    'e': ['e', '3', '€'],
+    'i': ['i', '1', '!'],
+    'o': ['o', '0'],
+    'u': ['u', 'µ']
+}
+
+def leet_variants(word):
+    slots = []
+    for c in word:
+        if c.lower() in leet_map:
+            slots.append(leet_map[c.lower()])
+        else:
+            slots.append([c])
+    return map(''.join, product(*slots))
+
+def process_word(word):
+    word = word.strip()
+    for variant in leet_variants(word):
+        h = hashlib.sha256(variant.encode()).hexdigest()
+        if h == target:
+            return variant
+    return None
+
+def main():
+    with open("rockyou.txt", "r", errors="ignore") as f:
+        words = [line.strip() for line in f if any(v in line for v in 'aeiou')]
+
+    with Pool(cpu_count()) as pool:
+        for result in pool.imap_unordered(process_word, words):
+            if result:
+                print(f"\n✅ Found pass3: {result}")
+                break
+
+if __name__ == "__main__":
+    main()
+```
+
+The result is :
+
+![image](https://hackmd.io/_uploads/ryH-M0NUgg.png)
+
+Now we will put it back together 
+FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
+
