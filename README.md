@@ -3,7 +3,12 @@ These are some challenges I was able to solve in this competition. I am a newbie
 ## Hash Cracking
 ![image](https://hackmd.io/_uploads/BkamgCN8xg.png)
 
-The flag here will require finding 3 passwords and combining them with the form L3AK{pass1_pass2_pass3}
+The flag here will require finding 3 passwords and combining them with the form L3AK{pass1_pass2_pass3} with 3 hashes 
+```
+5e09f66ae5c6b2f4038eba26dc8e22d8aeb54f624d1d3ed96551e90dac7cf0d
+fb58c041b0059e8424ff1f8d2771fca9ba0bf5dcdd10c48e7a67a9463ebfa8
+4ac53d0444a86786752ac78e2dc86f60a629e4639edacc6a5937146f3eacc30f
+```
 
 Find password 1:
 
