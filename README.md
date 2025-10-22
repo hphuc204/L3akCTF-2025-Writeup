@@ -28,7 +28,33 @@ We will see the result as
 ![image](https://hackmd.io/_uploads/H1tTqRE8el.png)
 
 Now I will find password 2:
-Based on the assignment requirements, we will write a Python script named ```crack_pass2.p```y to:
+Based on the assignment requirements, we will write a Python script named ```crack_pass2.py``` to:
 - Iterate through each word in rockyou.txt
 - Remove each character in the word one by one
 - Hash each modified version and compare it with the given hash
+
+```python
+import hashlib
+def sha256(s):
+    return hashlib.sha256(s.encode()).hexdigest()
+
+target_hash = "fb58c041b0059e8424ff1f8d2771fca9ab0f5dcdd10c48e7a67a9467aa8ebfa8"
+count = 0
+
+with open("rockyou.txt", "r", encoding="latin-1") as f:
+    for word in f:
+        word = word.strip()
+        # Loại bỏ từ quá ngắn (xóa 1 ký tự phải còn > 0)
+        if len(word) < 2:
+            continue
+        for i in range(len(word)):
+            mutated = word[:i] + word[i+1:]  # xóa ký tự tại vị trí i
+            count += 1
+            if count % 500000 == 0:
+                print(f"Đã thử {count} tổ hợp: {mutated}")
+            if sha256(mutated) == target_hash:
+                print("✅ Password 2 FOUND:", mutated)
+                exit()
+```
+I spent quite some time, and the result is: 
+![image](https://hackmd.io/_uploads/HJ0oZRE8xx.png)
