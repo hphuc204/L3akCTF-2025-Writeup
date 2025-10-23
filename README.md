@@ -143,4 +143,26 @@ Found the computer name is `99PHOENIXDOWNS`
 
 ![image](https://hackmd.io/_uploads/Hy1Z5nGLlx.png)
 
-Tìm được tên máy tính là `99PHOENIXDOWNS`
+#### 2. What was the SSID of the first Wi-Fi network they connected to?
+
+Need to load the `SOFTWARE` hive using Registry Explorer, then go to `MicrosoftWindows NTCurrentVersionNetworkList`
+
+![image](https://hackmd.io/_uploads/r13352fUex.png)
+
+There are two, but since the question asks which one came first, you should base it on the time and choose the earlier one, which is `mugs_guest_5G`.
+
+![image](https://hackmd.io/_uploads/HyQLohzLel.png)
+
+#### 3. When did they obtain the DHCP lease at the first café?
+
+In hive 'SYSTEM', at 'ControlSet001ServicesTcpipParametersInterfaces'
+
+![image](https://hackmd.io/_uploads/rypL22MUxl.png)
+
+The answer is `2025-05-14 00:13:36`
+
+![image](https://hackmd.io/_uploads/Hy4C2hf8lg.png)
+
+#### 4. What IP address was assigned at the first café?
+
+Still in the same position as the sentence above, the IP address obtained is `192.168.0.114`
