@@ -63,7 +63,7 @@ Finally it's pass 3 :
 
 I will create a Python script named ```crack_pass3.py```
 
-```
+```python
 python import hashlib
 from itertools import product
 from multiprocessing import Pool, cpu_count
@@ -274,7 +274,7 @@ After extracting, we will focus on 3 files:
 
 Create a Python file named parse_evtx.py
 
-```
+```python
 from Evtx.Evtx import Evtx
 import sys
 
