@@ -1,5 +1,5 @@
 # L3akCTF-2025-Writeup
-These are some challenges I was able to solve in this competition. I am a newbie new to playing CTF. I was very happy to have solved some of these challenges together with my teammates, with the assistant GPT by my side. I have never done write-ups before - please excuse any mistakes
+Participating in this competition was a fantastic experience, and I'm proud of the challenges my teammates and I were able to solve. Despite being new to Capture The Flag (CTF), I felt a real sense of accomplishment, especially with the help of the GPT assistant. I'm currently working on the write-ups—my first attempt ever—and I hope they're clear! It’s been a great journey of learning
 ## Hash Cracking
 ![image](https://hackmd.io/_uploads/BkamgCN8xg.png)
 
