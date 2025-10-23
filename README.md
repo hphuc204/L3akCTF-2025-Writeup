@@ -289,4 +289,38 @@ with Evtx(evtx_path) as log:
         print(record.xml())
 ```
 
+Then run 3 commands :
+
+```python
+python parse_evtx.py "./C/Windows/System32/winevt/logs/Microsoft-Windows-WLAN-AutoConfig%4Operational.evtx" > wlan.xml
+
+python parse_evtx.py "./C/Windows/System32/winevt/logs/Microsoft-Windows-NetworkProfile%4Operational.evtx" > netprof.xml
+
+python parse_evtx.py "./C/Windows/System32/winevt/logs/Microsoft-Windows-Dhcp-Client%4Admin.evtx" > dhcp.xml
+```
+
+After running it, we will get the results.
+
+```grep -aiE 'mac|([0-9a-f]{2}[:-]){5}[0-9a-f]{2}|address|physical' wlan.xml netprof.xml dhcp.xml ```
+
+![image](https://hackmd.io/_uploads/ry7V1R4Lgl.png)
+
+![image](https://hackmd.io/_uploads/Hyev2pNUge.png)
+
+#### 14. What city did this take place in?
+
+Because the questions mention a café and include the keyword 'alleycat', try searching for 'alleycat coffee' on Google
+
+![image](https://hackmd.io/_uploads/ryjNQ6zLgl.png)
+
+The location is `Fort Collins` and this is the correct answer
+
+![image](https://hackmd.io/_uploads/B1eD76MUge.png)
+
+After answering all the questions correctly, I will get a flag.
+
+![image](https://hackmd.io/_uploads/S1NJNTfLgl.png)
+
+
+FLAG: ```L3AK{Gh057_R!d!ng_7h3_W4v35}```
 
