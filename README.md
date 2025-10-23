@@ -179,3 +179,9 @@ Access Edge's History file `KAPEOUT\C\Users\NotVi\AppData\Local\Microsoft\Edge\U
 Open with DB Browser, select the `Browse Data` tab, and choose the `urls` table
 
 ![image](https://hackmd.io/_uploads/S1KJChzIle.png)
+
+Saw the Github link and that is the answer `https://github.com/dbissell6/DFIR/blob/main/Blue_Book/Blue_Book.md`
+
+![image](https://hackmd.io/_uploads/Hk77Rnf8lg.png)
+
+
