@@ -122,3 +122,11 @@ FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
 ## Forensic
 ### Wi-Fight A Ghost?
 ![image](https://hackmd.io/_uploads/S1yw_hMIxl.png)
+
+This is an assignment I worked on together with my teammates. 
+
+We need to answer 14 questions to get the flag
+
+![image](https://hackmd.io/_uploads/S1_3O3MUxg.png)
+
+Tools used for the assignment: Registry Explorer, DB Browser for SQLite, MFT Explorer
