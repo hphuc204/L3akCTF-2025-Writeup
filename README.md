@@ -123,10 +123,20 @@ FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
 ### Wi-Fight A Ghost?
 ![image](https://hackmd.io/_uploads/S1yw_hMIxl.png)
 
-This is an assignment I worked on together with my teammates [@daq2712](https://github.com/daq2712)
+This is an assignment I worked on together with my teammate [@daq2712](https://github.com/daq2712)
 
 We need to answer 14 questions to get the flag
 
 ![image](https://hackmd.io/_uploads/S1_3O3MUxg.png)
 
 Tools used for the assignment: Registry Explorer, DB Browser for SQLite, MFT Explorer
+
+#### 1. What was the ComputerName of the device?
+
+Navigate to 'KAPEOUT/C/Windows/System32/config/SYSTEM'
+
+Open hive 'SYSTEM' using registry explorer, go to 'ControlSet001ControlComputerNameComputerName'
+
+![image](https://hackmd.io/_uploads/Skk0Fnz8el.png)
+
+Tìm được tên máy tính là `99PHOENIXDOWNS`
