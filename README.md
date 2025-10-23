@@ -119,3 +119,6 @@ Now we will put it back together
 
 FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
 
+## Forensic
+### Wi-Fight A Ghost?
+![image](https://hackmd.io/_uploads/S1yw_hMIxl.png)
