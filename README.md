@@ -166,3 +166,16 @@ The answer is `2025-05-14 00:13:36`
 #### 4. What IP address was assigned at the first café?
 
 Still in the same position as the sentence above, the IP address obtained is `192.168.0.114`
+
+![image](https://hackmd.io/_uploads/rJYzTnz8ge.png)
+
+![image](https://hackmd.io/_uploads/BJXEpnGLgx.png)
+
+
+#### 5. What GitHub page did they visit at the first café?
+
+Access Edge's History file `KAPEOUT\C\Users\NotVi\AppData\Local\Microsoft\Edge\User Data\Default\History`
+
+Open with DB Browser, select the `Browse Data` tab, and choose the `urls` table
+
+![image](https://hackmd.io/_uploads/S1KJChzIle.png)
