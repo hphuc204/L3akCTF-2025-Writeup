@@ -324,3 +324,46 @@ After answering all the questions correctly, I will get a flag.
 
 FLAG: ```L3AK{Gh057_R!d!ng_7h3_W4v35}```
 
+## Mobile
+
+### BrainCalc
+
+![image](https://hackmd.io/_uploads/H1FT_C4Lxg.png)
+
+First, we will extract the ```.apk``` file:```unzip app-debug1.apk -d extracted_apk/```
+
+Then check the directory we just extracted ```tree extracted_apk/ -L 2```
+
+After extraction is complete and confirming that the ```assets/chaquopy``` directory exists — this is where the embedded Python code inside the app is stored.
+
+![image](https://hackmd.io/_uploads/B1ZGVkSUee.png)
+
+We will move to the directory containing ```Chaquopy``` and check the contents of the directory:
+
+```
+cd extracted_apk/assets/chaquopy
+ls -lh
+```
+
+![image](https://hackmd.io/_uploads/Bk2cVJBUee.png)
+
+When you see a ```file app.imy``` - this is the most important file containing the compiled Python code of the application (in the form of ```.pyc```), you can rename ```app.imy``` to ```.zip``` in order to extract it.
+
+![image](https://hackmd.io/_uploads/SkxnryHLxl.png)
+
+We can see that ```unpacked_py/BrainCalc/app.pyc``` is the file containing the main logic and the flag, so we will decode the flag using a Python script.
+
+```python
+import zlib, base64
+
+# Chuỗi base64 + zlib được lấy từ hàm get_secret_reward
+s = 'eJzzMXb0rvYqLS6JN4kPNynKjQ8tiHfOMMnJqQUAeHcJQA=='
+
+# Giải mã và in flag
+flag = zlib.decompress(base64.b64decode(s)).decode()
+print("✅ FLAG:", flag)
+```
+
+![image](https://hackmd.io/_uploads/rJ0ZIJrIlg.png)
+
+FLAG: ```L3AK{Just_4_W4rm_Up_Ch4ll}```
