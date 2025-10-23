@@ -139,4 +139,8 @@ Open hive 'SYSTEM' using registry explorer, go to 'ControlSet001ControlComputerN
 
 ![image](https://hackmd.io/_uploads/Skk0Fnz8el.png)
 
+Found the computer name is `99PHOENIXDOWNS`
+
+![image](https://hackmd.io/_uploads/Hy1Z5nGLlx.png)
+
 Tìm được tên máy tính là `99PHOENIXDOWNS`
