@@ -115,7 +115,7 @@ The result is :
 
 ![image](https://hackmd.io/_uploads/ryH-M0NUgg.png)
 
-Now we will put it back together 
+Now i will put it back together 
 
 FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
 
@@ -123,7 +123,7 @@ FLAG : ``` L3AK{hyepsi^4B_thecowsaysmo_unf0rg1v@bl3} ```
 ### Wi-Fight A Ghost?
 ![image](https://hackmd.io/_uploads/S1yw_hMIxl.png)
 
-This is an assignment I worked on together with my teammate [@daq2712](https://github.com/daq2712)
+This is an assignment i worked on together with my teammate [@daq2712](https://github.com/daq2712)
 
 We need to answer 14 questions to get the flag
 
@@ -330,15 +330,15 @@ FLAG: ```L3AK{Gh057_R!d!ng_7h3_W4v35}```
 
 ![image](https://hackmd.io/_uploads/H1FT_C4Lxg.png)
 
-First, we will extract the ```.apk``` file:```unzip app-debug1.apk -d extracted_apk/```
+First, i will extract the ```.apk``` file:```unzip app-debug1.apk -d extracted_apk/```
 
-Then check the directory we just extracted ```tree extracted_apk/ -L 2```
+Then check the directory i just extracted ```tree extracted_apk/ -L 2```
 
 After extraction is complete and confirming that the ```assets/chaquopy``` directory exists — this is where the embedded Python code inside the app is stored.
 
 ![image](https://hackmd.io/_uploads/B1ZGVkSUee.png)
 
-We will move to the directory containing ```Chaquopy``` and check the contents of the directory:
+I will move to the directory containing ```Chaquopy``` and check the contents of the directory:
 
 ```
 cd extracted_apk/assets/chaquopy
@@ -347,11 +347,11 @@ ls -lh
 
 ![image](https://hackmd.io/_uploads/Bk2cVJBUee.png)
 
-When you see a ```file app.imy``` - this is the most important file containing the compiled Python code of the application (in the form of ```.pyc```), you can rename ```app.imy``` to ```.zip``` in order to extract it.
+When i see a ```file app.imy``` - this is the most important file containing the compiled Python code of the application (in the form of ```.pyc```), i can rename ```app.imy``` to ```.zip``` in order to extract it.
 
 ![image](https://hackmd.io/_uploads/SkxnryHLxl.png)
 
-We can see that ```unpacked_py/BrainCalc/app.pyc``` is the file containing the main logic and the flag, so we will decode the flag using a Python script.
+I can see that ```unpacked_py/BrainCalc/app.pyc``` is the file containing the main logic and the flag, so i will decode the flag using a Python script.
 
 ```python
 import zlib, base64
