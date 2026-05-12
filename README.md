@@ -52,7 +52,7 @@ with open("rockyou.txt", "r", encoding="latin-1") as f:
             if count % 500000 == 0:
                 print(f"Đã thử {count} tổ hợp: {mutated}")
             if sha256(mutated) == target_hash:
-                print("✅ Password 2 FOUND:", mutated)
+                print(" Password 2 FOUND:", mutated)
                 exit()
 ```
 I spent quite some time, and the result is: 
@@ -104,7 +104,7 @@ def main():
     with Pool(cpu_count()) as pool:
         for result in pool.imap_unordered(process_word, words):
             if result:
-                print(f"\n✅ Found pass3: {result}")
+                print(f"\n Found pass3: {result}")
                 break
 
 if __name__ == "__main__":
@@ -361,7 +361,7 @@ s = 'eJzzMXb0rvYqLS6JN4kPNynKjQ8tiHfOMMnJqQUAeHcJQA=='
 
 # Giải mã và in flag
 flag = zlib.decompress(base64.b64decode(s)).decode()
-print("✅ FLAG:", flag)
+print(" FLAG:", flag)
 ```
 
 ![image](https://hackmd.io/_uploads/rJ0ZIJrIlg.png)
