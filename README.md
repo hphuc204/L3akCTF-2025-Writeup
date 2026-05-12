@@ -57,7 +57,8 @@ with open("rockyou.txt", "r", encoding="latin-1") as f:
 ```
 I spent quite some time, and the result is: 
 
-![image](https://hackmd.io/_uploads/HJ0oZRE8xx.png)
+<img width="463" height="36" alt="image" src="https://github.com/user-attachments/assets/17b694e5-b7c8-4712-85a9-ce2a5fdb70b5" />
+
 
 Finally it's pass 3 :
 
@@ -113,7 +114,8 @@ if __name__ == "__main__":
 
 The result is :
 
-![image](https://hackmd.io/_uploads/ryH-M0NUgg.png)
+<img width="397" height="53" alt="image" src="https://github.com/user-attachments/assets/144e5a45-b86d-49d5-bb36-558a22745c64" />
+
 
 Now i will put it back together 
 
@@ -364,6 +366,7 @@ flag = zlib.decompress(base64.b64decode(s)).decode()
 print(" FLAG:", flag)
 ```
 
-![image](https://hackmd.io/_uploads/rJ0ZIJrIlg.png)
+<img width="512" height="61" alt="image" src="https://github.com/user-attachments/assets/8556ec4b-716e-4f57-a870-e1bbf077cd0d" />
+
 
 FLAG: ```L3AK{Just_4_W4rm_Up_Ch4ll}```
